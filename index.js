@@ -1,7 +1,7 @@
 /*variabler for poeng*/
-var poeng = 0;
-var poengtrekk = 0;
-var trekkPoeng = true;
+let poeng = 0;
+let poengtrekk = 0;
+let trekkPoeng = true;
 
 /* setInterva for poengtelling*/
 setInterval(function () {
@@ -13,14 +13,14 @@ setInterval(function () {
 }, 1000);
 
 /* variabler for firekantene */
-var firkant1 = document.getElementById('firkant1');
-var firkant2 = document.getElementById('firkant2');
-var maxX = window.innerWidth - firkant2.offsetWidth;
-var maxY = window.innerHeight - firkant2.offsetHeight;
-var posX = firkant2.offsetLeft;
-var posY = firkant2.offsetTop;
-var moveX = 1;
-var moveY = 1;
+let firkant1 = document.getElementById('firkant1');
+let firkant2 = document.getElementById('firkant2');
+let maxX = window.innerWidth - firkant2.offsetWidth;
+let maxY = window.innerHeight - firkant2.offsetHeight;
+let posX = firkant2.offsetLeft;
+let posY = firkant2.offsetTop;
+let moveX = 1;
+let moveY = 1;
 
 /*Bevegelse function for kvadratene */
 function moveSquare() {
@@ -35,9 +35,9 @@ function moveSquare() {
   firkant2.style.left = posX + 'px';
   firkant2.style.top = posY + 'px';
 
-  var rect1 = firkant1.getBoundingClientRect();
-  var rect2 = firkant2.getBoundingClientRect();
-  var avstand = Math.sqrt(
+  let rect1 = firkant1.getBoundingClientRect();
+  let rect2 = firkant2.getBoundingClientRect();
+  let avstand = Math.sqrt(
     Math.pow(rect1.left - rect2.left, 2) + Math.pow(rect1.top - rect2.top, 2)
   );
   if (avstand < 100) {
@@ -57,9 +57,9 @@ setInterval(function () {
 /*function for å beveg firekant med w,s,a,d*/
 
 document.addEventListener('keydown', function (event) {
-  var rect1 = firkant1.getBoundingClientRect();
-  var maxX = window.innerWidth - firkant1.offsetWidth;
-  var maxY = window.innerHeight - firkant1.offsetHeight;
+  let rect1 = firkant1.getBoundingClientRect();
+  let maxX = window.innerWidth - firkant1.offsetWidth;
+  let maxY = window.innerHeight - firkant1.offsetHeight;
 
   if (event.key == 'w') {
     firkant1.style.top = Math.max(rect1.top - 10, 0) + 'px';
