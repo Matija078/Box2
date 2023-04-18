@@ -1,7 +1,9 @@
+/*variabler for poeng*/
 var poeng = 0;
 var poengtrekk = 0;
 var trekkPoeng = true;
 
+/* setInterva for poengtelling*/
 setInterval(function () {
   poeng += 1;
   if (trekkPoeng && poeng > 0) {
@@ -10,6 +12,7 @@ setInterval(function () {
   document.getElementById('poengtelling').innerHTML = 'Poeng: ' + poeng;
 }, 1000);
 
+/* variabler for firekantene */
 var firkant1 = document.getElementById('firkant1');
 var firkant2 = document.getElementById('firkant2');
 var maxX = window.innerWidth - firkant2.offsetWidth;
@@ -19,6 +22,7 @@ var posY = firkant2.offsetTop;
 var moveX = 1;
 var moveY = 1;
 
+/*Bevegelse function for kvadrat */
 function moveSquare() {
   posX += moveX;
   posY += moveY;
@@ -45,9 +49,12 @@ function moveSquare() {
   }
 }
 
+/*setInterval function for bevegelse av kvadrat */
 setInterval(function () {
   moveSquare();
 }, 10);
+
+/*function for å beveg firekant med w,s,a,d*/
 
 document.addEventListener('keydown', function (event) {
   var rect1 = firkant1.getBoundingClientRect();
