@@ -22,7 +22,7 @@ var posY = firkant2.offsetTop;
 var moveX = 1;
 var moveY = 1;
 
-/*Bevegelse function for kvadrat */
+/*Bevegelse function for kvadratene */
 function moveSquare() {
   posX += moveX;
   posY += moveY;
